@@ -8,7 +8,7 @@ body {
   --primary: #6b2aee;
   --secondary: #02e7d9;
   --light-grey: #e5e5e5;
-  --dark-grey: #707070;
+  --dark-grey: #000000;
   font-family: "Poppins", sans-serif;
 }
 
@@ -28,6 +28,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo{
+  height: 5rem;
 }
 
 .btn-header {
@@ -148,7 +152,7 @@ header {
     background-image: linear-gradient(var(--secondary), var(--primary));
     margin-top: -100px;
     padding: 100px 0 150px 0;
-    color: #fff;
+    color: #000000;
     position: relative;
 }
 
@@ -177,7 +181,7 @@ header {
 
 .porq hr {
     width: 10%;
-    border-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(0, 0, 0, 0.25);
 }
 
 .porq-campos-item {
@@ -198,7 +202,7 @@ header {
 }
 
 .porq-item div:first-child {
-    border: solid 2px #fff;
+    border: solid 2px #000000;
     border-radius: 50%;
     padding: 5px;
 }
@@ -229,7 +233,7 @@ header {
 
 .title-section-faqs {
   text-align: center;
-  color: var(--dark-grey);
+  color: #000000;
   margin-top: -50px;
   margin-bottom: 50px;
 }
@@ -302,7 +306,6 @@ header {
 }
 
 /* Footer */
-
 footer {
   background-color: var(--primary);
   padding: 50px 0;
@@ -355,4 +358,103 @@ footer {
 .social-media a:hover {
   transform: scale(1.07);
   transition: .4s;
+}
+
+/* Breakpoints */
+@media(max-width: 1200px) {}
+
+@media(max-width: 992px) {
+  .principal {
+    background-size: 100% 100%;
+    background-position: bottom;
+    padding: 50px 0;
+  }
+
+  .principal-image {
+    display: none;
+  }
+
+  .principal-section {
+    justify-content: center;
+  }
+
+  .principal-description {
+    text-align: center;
+  }
+
+  .porq {
+    margin-top: 0;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .principal-section, .principal-description {
+    width: 100%;
+    display: block;
+  }
+
+  .principal-description {
+    gap: 0;
+    max-width: 100%;
+  }
+
+  .principal-diarista-text, .principal-description p {
+    border: none;
+    padding: 0;
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .principal-diarista-text::after{
+    display: none;
+  }
+
+  .principal-diarista-text span {
+    color: var(--dark-grey);
+  }
+
+  .principal-description a {
+    display: block;
+    width: 80%;
+    padding: 15px;
+    margin: 30px auto 10px auto;
+  }
+}
+
+
+@media(max-width: 600px) {
+  .porq-campos-item {
+    gap: 15px;
+  }
+
+  .porq-campos-item hr {
+    width: 100%;
+    display: block;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .porq-item i {
+    font-size: 24px;
+  }
+
+  .btn-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
